@@ -1,0 +1,164 @@
+$phone: 400px;
+$tablet: 640px;
+$laptop: 1024px;
+$desktop: 1280px;
+
+.login {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #a4d4b4;
+	color: #000;
+	overflow: auto;
+
+	@media only screen and (max-width: $phone) {
+		height: 100%;
+	}
+
+	.wrapper {
+		height: 70%;
+		width: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		border-radius: 2rem;
+		overflow: auto;
+
+		@media only screen and (max-width: $phone) {
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			border-radius: 0;
+			width: 100%;
+			gap: 1rem;
+			padding: 5rem 0;
+		}
+
+		.left {
+			flex: 1;
+			padding: 20px 40px;
+
+			@media only screen and (max-width: $phone) {
+				padding: 3rem 2rem;
+				width: 100%;
+			}
+
+			h1 {
+				font-size: 4rem;
+				color: #000;
+				font-weight: bold;
+			}
+
+			p {
+				font-size: 1.6rem;
+				font-weight: bolder;
+				color: #373737;
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+			}
+
+			.card {
+				height: 26rem;
+				width: 24rem;
+				background: rgba(255, 255, 255, 0.0891);
+				border: 1px solid rgba(0, 0, 0, 0.4);
+				border-radius: 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				cursor: pointer;
+				transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+				&:hover {
+					transform: scale(1.01);
+					box-shadow: 10px 10px 0#000;
+				}
+
+				p {
+					margin-top: 2rem;
+					color: #000;
+					text-align: center;
+					font-size: 1.5rem;
+					letter-spacing: 1px;
+					font-weight: bold;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		.right {
+			flex: 1;
+			padding: 20px 40px;
+
+			@media only screen and (max-width: $phone) {
+				padding: 3rem 2rem;
+				width: 100%;
+			}
+
+			h1 {
+				font-size: 5rem;
+				font-weight: bold;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				margin-top: 10rem;
+
+				input {
+					padding: 1.2rem 1rem;
+					border: none;
+					outline: none;
+					border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+					background: transparent;
+					font-size: 20px;
+					letter-spacing: 0.5px;
+					font-weight: lighter;
+					width: 100%;
+					transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+					&:focus {
+						border: 1px solid #000;
+						box-shadow: 7px 7px 0 #000;
+					}
+
+					&:nth-child(2) {
+						margin-top: 2rem;
+					}
+
+					@media only screen and (max-width: $phone) {
+						font-size: 14px;
+					}
+				}
+				button {
+					background-color: transparent;
+					font-size: 20px;
+					font-weight: 600;
+					letter-spacing: 1px;
+					cursor: pointer;
+					padding: 1.4rem 3rem;
+					border: 2px solid #000;
+					width: fit-content;
+					outline: none;
+
+					box-shadow: 7px 7px 0 #000;
+					transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+					&:hover {
+						box-shadow: none;
+					}
+
+					@media only screen and (max-width: $phone) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

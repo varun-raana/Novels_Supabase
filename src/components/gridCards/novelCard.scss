@@ -1,0 +1,81 @@
+.novelCard {
+	padding: 2rem;
+	width: 100%;
+	cursor: pointer;
+	position: relative;
+	background: #613d6601;
+	border: 2px solid black;
+	box-shadow: 5px 5px 0px black;
+	transition: all 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+	h1 {
+		font-size: 2.8rem;
+		font-weight: 800;
+		margin-bottom: 2rem;
+		color: #613d66;
+	}
+
+	p {
+		font-size: 2rem;
+		line-height: 2.5rem;
+		letter-spacing: 0.2px;
+		text-transform: capitalize;
+		text-align: left;
+		text-justify: inter-ideograph;
+	}
+
+	figcaption {
+		margin-bottom: 0.5rem;
+		margin-top: 1.3rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		p {
+			font-size: 1.6rem;
+		}
+
+		small {
+			display: block;
+			font-size: 12px;
+			color: #888;
+			margin-top: 0.5rem;
+		}
+
+		h4 {
+			font-size: 1.5rem;
+			font-weight: 400;
+			text-decoration: underline;
+			letter-spacing: 1px;
+		}
+	}
+
+	&:hover {
+		box-shadow: none;
+	}
+
+	.buttonContainer {
+		position: absolute;
+		bottom: -7%;
+		right: -2%;
+		display: flex;
+		gap: 7px;
+		align-items: center;
+		z-index: 1;
+
+		.button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 30px;
+			width: 30px;
+			font-size: 2rem;
+			border: 1px solid black;
+			outline: none;
+			border-radius: 100%;
+			cursor: pointer;
+			background: #fff;
+			color: black;
+		}
+	}
+}
